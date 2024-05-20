@@ -28,38 +28,43 @@
         //enters can enter ROCK or RoCk 'ROCk'
         let human = humanChoice.toLowerCase()
      //lose situations
-        if(human === "rock" && computerChoice==="paper") {
-       return "You lose! Paper beats Rock"
+        if(human == "rock" && computerChoice=="paper") {
+       console.log("You lose! Paper beats Rock");
        computerScore++
 
         }
-       else if(human === "paper" && computerChoice==="scissors") {
-       return "You lose! Scissors beats Paper"
+       else if(human == "paper" && computerChoice=="scissors") {
+       console.log("You lose! Scissors beats Paper");
        computerScore++
         }
 
-        else if(human === "scissors" && computerChoice==="rock") {
-       return "You lose! Rock beats Scissors"
+        else if(human === "scissors" && computerChoice=="rock") {
+       console.log("You lose! Rock beats Scissors");
        computerScore++
         }
        //win situations
-        else if(human === "rock" && computerChoice==="scissors") {
-       return "You Won! Rock beats Scissors"
+        else if(human == "rock" && computerChoice=="scissors") {
+       console.log("You Won! Rock beats Scissors");
        humanScore++
         }
-        else if(human === "paper" && computerChoice==="rock") {
-       return "You Won! Paper beats Rock"
+        else if(human == "paper" && computerChoice=="rock") {
+       console.log("You Won! Paper beats Rock");
        humanScore++
         }
 
-        else if(human === "scissors" && computerChoice==="paper") {
-       return "You Won! Scissors beats Paper"
+        else if(human == "scissors" && computerChoice=="paper") {
+     console.log("You Won! Scissors beats Paper");
        humanScore++
+        } else {
+            console.log("no one won");
         }
 
     }
+        
+    const humanSelection = getHumanChoice()
+    const computerSelection = getComputerChoice()
 
-  
+    playRound(humanSelection,computerSelection)
 
     </script>
 </body>
