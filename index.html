@@ -7,21 +7,59 @@
 </head>
 <body>
     <script>
+        //computer choice
        function getComputerChoice() {
            let values = ["rock", "paper", "scissors"]
            return values[Math.floor(Math.random()*values.length)]
        }
      
-       
+       //human choice
       function getHumanChoice() {
         let answer = prompt("enter rock, scissors or paper")
         return answer
        }
-  
+        
+         //scores
         let humanScore = 0
         let computerScore = 0
+      
+        //single round counter
+    function playRound(humanChoice, computerChoice) {
+        //enters can enter ROCK or RoCk 'ROCk'
+        let human = humanChoice.toLowerCase()
+     //lose situations
+        if(human === "rock" && computerChoice==="paper") {
+       return "You lose! Paper beats Rock"
+       computerScore++
 
-        
+        }
+       else if(human === "paper" && computerChoice==="scissors") {
+       return "You lose! Scissors beats Paper"
+       computerScore++
+        }
+
+        else if(human === "scissors" && computerChoice==="rock") {
+       return "You lose! Rock beats Scissors"
+       computerScore++
+        }
+       //win situations
+        else if(human === "rock" && computerChoice==="scissors") {
+       return "You Won! Rock beats Scissors"
+       humanScore++
+        }
+        else if(human === "paper" && computerChoice==="rock") {
+       return "You Won! Paper beats Rock"
+       humanScore++
+        }
+
+        else if(human === "scissors" && computerChoice==="paper") {
+       return "You Won! Scissors beats Paper"
+       humanScore++
+        }
+
+    }
+
+  
 
     </script>
 </body>
